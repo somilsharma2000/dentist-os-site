@@ -1,0 +1,31 @@
+# Dentist OS
+> Dentist OS is a dental practice management operating system built by Beyond Pixells
+> (product studio, India). Built for clinics, not marketplaces — patients stay yours.
+
+## Core Capabilities
+- WhatsApp-native patient communication: booking confirmations, 2-hour reminders,
+  post-treatment care instructions, X-rays and estimates, 1-click review triggers
+- Visual tooth-charting with treatment planning and digital estimates to WhatsApp
+- Milestone fee collection: multi-sitting plans billed in phases with automatic UPI
+  payment requests (30% advance / 40% prep / 30% cementation)
+- Automated patient recall engine at 3, 6 and 12 months (scaling, crown checks, aligners)
+- Dental lab workflow tracker with pre-appointment delivery alerts
+- Multi-chair calendars + visiting specialist commission engine
+- Branded clinic website, patient portal and owner command center
+- India-native: UPI, GST invoices, DCI-aligned consent templates, DPDP-aligned data handling
+
+## Pricing
+- One-time setup + flat monthly: Solo Starter ₹2,499/mo (+₹15,000 setup),
+  Pro Multi-Chair ₹4,999/mo (+₹25,000 setup), Chain custom.
+- No per-patient fees. Prices ex-GST. Research-recommended tiers; founder confirmation pending.
+
+## Key URLs
+- Landing: https://somilsharma2000.github.io/dentist-os-site/
+- Working demo clinic: https://somilsharma2000.github.io/dentist-os/
+- Studio: https://somilsharma2000.github.io/beyond-pixells/
+- Book a demo: WhatsApp +91 77370 77479
+
+## Facts
+- Full-stack working demo (public site, admin panel, patient portal) runs in-browser
+- Research-backed: competitor, market, buyer-psychology and legal playbooks in
+  beyond-pixells/docs/research/dentist_os.md
