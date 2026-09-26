@@ -189,7 +189,15 @@ footer{padding:60px 0 44px;border-top:1px solid var(--stroke-soft);background:#0
 .clientstrip p{text-align:center;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:#6E688F;margin-bottom:20px;font-weight:700}
 .clientstrip .bp-marquee-track span{color:#ABA6C7;font-weight:700;font-size:.95rem}
 @media(max-width:760px){.mock-body{grid-template-columns:1fr}.mock-side{flex-direction:row;overflow:auto;border-right:none;border-bottom:1px solid rgba(139,172,250,.09)}.mock-kpis{grid-template-columns:repeat(2,1fr)}.mock-panels{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){.hero h1 .hl{animation:none}.bp-hero-step,.bp-hero-delay{animation:none;opacity:1}}
+
+/* at-rest life (ONE DESIGN law) */
+.mock{animation:mockfloat 8s ease-in-out infinite}
+@keyframes mockfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.btn-wa{animation:ctaglow 3.2s ease-in-out infinite}
+@keyframes ctaglow{0%,100%{box-shadow:0 12px 40px rgba(33,196,93,.35)}50%{box-shadow:0 12px 54px rgba(33,196,93,.6),0 0 22px rgba(33,196,93,.3)}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.hero h1 .hl{animation:none}.bp-hero-step,.bp-hero-delay{animation:none;opacity:1}.mock,.btn-wa{animation:none}.reveal{opacity:1;transform:none;transition:none}}
 </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "My front desk isn't technical.", "acceptedAnswer": {"@type": "Answer", "text": "Dentist OS runs where your staff already lives: WhatsApp and a browser. Confirmations and reminders send themselves. We train your front desk in one call — and we do the migration for you."}}, {"@type": "Question", "name": "What about patient data safety?", "acceptedAnswer": {"@type": "Answer", "text": "Patient records are encrypted in transit and at rest, and handled in line with India's DPDP Act. Your data is yours — every record is exportable anytime, and consent is captured digitally at every step."}}, {"@type": "Question", "name": "I already use Practo Ray / a paper register.", "acceptedAnswer": {"@type": "Answer", "text": "Perfect. We migrate your complete patient history, treatment logs and contacts from Practo, Excel or paper cards within 24 hours — free, zero disruption. Keep the register as backup; you'll stop using it on your own."}}, {"@type": "Question", "name": "Will my patients actually use it?", "acceptedAnswer": {"@type": "Answer", "text": "They don't have to adopt anything. No app downloads. Confirmations, reminders, X-rays, estimates and payment links arrive on WhatsApp — which they already check every day."}}, {"@type": "Question", "name": "How do multi-sitting treatments work?", "acceptedAnswer": {"@type": "Answer", "text": "Treatment plans track milestone billings across sittings — advance, prep, cementation — with automatic UPI deposit requests before each sitting. No sitting ends in an uncollected balance."}}, {"@type": "Question", "name": "What about consent and legal documentation?", "acceptedAnswer": {"@type": "Answer", "text": "Pre-built consent templates for extractions, implants and surgeries, aligned with DCI guidelines — digitally signed, stored and searchable. (We recommend your own legal review before use.)"}}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Beyond Pixells", "item": "https://somilsharma2000.github.io/beyond-pixells/"}, {"@type": "ListItem", "position": 2, "name": "Dentist OS", "item": "https://somilsharma2000.github.io/dentist-os-site/"}]}</script>
@@ -502,5 +510,14 @@ footer{padding:60px 0 44px;border-top:1px solid var(--stroke-soft);background:#0
     <a class="bp-mct-btn" href="https://wa.me/917737077479?text=Hi!%20Book%20me%20a%20free%20Dentist%20OS%20demo.">Chat now</a>
   </div>
 </div>
+<script>
+(function(){
+  var els=document.querySelectorAll('section');
+  els.forEach(function(el){el.classList.add('reveal');});
+  if(!('IntersectionObserver' in window)){els.forEach(function(el){el.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el);});
+})();
+</script>
 </body>
 </html>
