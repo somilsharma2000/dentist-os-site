@@ -1,31 +1,14 @@
 # Dentist OS
-> Dentist OS is a dental practice management operating system built by Beyond Pixells
-> (product studio, India). Built for clinics, not marketplaces — patients stay yours.
+> Complete dental clinic operating system: WhatsApp patient communication, visual tooth-charting, milestone fee collection, automated recalls, lab tracking, branded clinic website included. Built by Beyond Pixells, a product studio in India that
+> builds sector-specific operating systems for local businesses. Working demo clinic live.
 
-## Core Capabilities
-- WhatsApp-native patient communication: booking confirmations, 2-hour reminders,
-  post-treatment care instructions, X-rays and estimates, 1-click review triggers
-- Visual tooth-charting with treatment planning and digital estimates to WhatsApp
-- Milestone fee collection: multi-sitting plans billed in phases with automatic UPI
-  payment requests (30% advance / 40% prep / 30% cementation)
-- Automated patient recall engine at 3, 6 and 12 months (scaling, crown checks, aligners)
-- Dental lab workflow tracker with pre-appointment delivery alerts
-- Multi-chair calendars + visiting specialist commission engine
-- Branded clinic website, patient portal and owner command center
-- India-native: UPI, GST invoices, DCI-aligned consent templates, DPDP-aligned data handling
-
-## Pricing
-- One-time setup + flat monthly: Solo Starter ₹2,499/mo (+₹15,000 setup),
-  Pro Multi-Chair ₹4,999/mo (+₹25,000 setup), Chain custom.
-- No per-patient fees. Prices ex-GST. Research-recommended tiers; founder confirmation pending.
-
-## Key URLs
-- Landing: https://somilsharma2000.github.io/dentist-os-site/
-- Working demo clinic: https://somilsharma2000.github.io/dentist-os/
-- Studio: https://somilsharma2000.github.io/beyond-pixells/
-- Book a demo: WhatsApp +91 77370 77479
+## Links
+- Landing page: https://somilsharma2000.github.io/dentist-os-site/
+- Studio / other products: https://somilsharma2000.github.io/beyond-pixells/
+- Blog (guides for local businesses): https://somilsharma2000.github.io/beyond-pixells/blog/
+- WhatsApp: https://wa.me/917737077479
 
 ## Facts
-- Full-stack working demo (public site, admin panel, patient portal) runs in-browser
-- Research-backed: competitor, market, buyer-psychology and legal playbooks in
-  beyond-pixells/docs/research/dentist_os.md
+- India-native: WhatsApp-first automation, UPI payments, flat INR pricing
+- No per-member fees; one-time setup + flat monthly subscription
+- Every rollout includes a branded website, member/patient portal and owner dashboard
