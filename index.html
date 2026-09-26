@@ -130,7 +130,8 @@ footer{border-top:1px solid var(--stroke-soft);padding:56px 0 40px;color:var(--d
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
-<body id="top">
+<body id="top" class="bp-noise-canvas">
+<div class="bp-scroll-progress-bar"></div>
 
 <nav>
   <div class="container">
@@ -147,14 +148,14 @@ footer{border-top:1px solid var(--stroke-soft);padding:56px 0 40px;color:var(--d
 
 <header class="hero">
   <div class="container">
-    <span class="pill"><span class="dot"></span>The operating system for modern dental practices</span>
-    <h1>Your clinic, running on <span class="hl">one calm system.</span></h1>
-    <p>Dentist OS brings your whole practice into one place — WhatsApp-native patient communication, visual tooth-charting, milestone fee collection and automated recalls. No marketplace. No per-patient fees. No chaos at the front desk.</p>
-    <div class="ctas">
-      <a class="btn btn-primary" href="https://wa.me/917737077479?text=Hi!%20I%20want%20a%20Dentist%20OS%20demo%20for%20my%20clinic.">Book a Free Demo</a>
+    <span class="pill bp-hero-step" style="--bp-hero-delay:0ms"><span class="dot"></span>The operating system for modern dental practices</span>
+    <h1 class="bp-hero-step" style="--bp-hero-delay:100ms">Your clinic, running on <span class="hl">one calm system.</span></h1>
+    <p class="bp-hero-step" style="--bp-hero-delay:220ms">Dentist OS brings your whole practice into one place — WhatsApp-native patient communication, visual tooth-charting, milestone fee collection and automated recalls. No marketplace. No per-patient fees. No chaos at the front desk.</p>
+    <div class="ctas bp-hero-step" style="--bp-hero-delay:340ms">
+      <a class="btn btn-primary bp-magnetic-btn" href="https://wa.me/917737077479?text=Hi!%20I%20want%20a%20Dentist%20OS%20demo%20for%20my%20clinic.">Book a Free Demo</a>
       <a class="btn btn-ghost" href="https://somilsharma2000.github.io/dentist-os/">Open the Live Demo</a>
     </div>
-    <div class="trust">
+    <div class="trust bp-hero-step" style="--bp-hero-delay:460ms">
       <div><b>24 hrs</b>setup + migration</div>
       <div><b>DPDP-aligned</b>patient data protection</div>
       <div><b>WhatsApp-native</b>zero new apps</div>
@@ -171,10 +172,10 @@ footer{border-top:1px solid var(--stroke-soft);padding:56px 0 40px;color:var(--d
       <p>Dental clinics lose revenue in the gaps between sittings: missed appointments, uncollected milestone payments, patients who never come back. Dentist OS closes every gap.</p>
     </div>
     <div class="pain">
-      <div class="pain-card"><div class="ico">🕐</div><div><b>The silent no-show</b><p>Industry no-show rates run 25–35%. Every empty chair is a slot you can't resell.</p><span class="cost">1 no-show/week at ₹2,000 ≈ ₹1,00,000/year lost</span></div></div>
-      <div class="pain-card"><div class="ico">📄</div><div><b>Paper case cards</b><p>Records live in physical files. When staff change, history walks out with them.</p><span class="cost">Unsearchable. Unbacked. Medicolegally thin.</span></div></div>
-      <div class="pain-card"><div class="ico">💳</div><div><b>Multi-sitting money leaks</b><p>RCTs, crowns and aligners span weeks. Advance collected, balance forgotten.</p><span class="cost">One unfinished crown case = months of follow-up calls</span></div></div>
-      <div class="pain-card"><div class="ico">🔁</div><div><b>The recall that never happens</b><p>Over 60% of patients never return for 6-month scaling and crown checks.</p><span class="cost">Recall is your cheapest revenue — and nobody sends it</span></div></div>
+      <div class="pain-card bp-spotlight-card"><div class="ico">🕐</div><div><b>The silent no-show</b><p>Industry no-show rates run 25–35%. Every empty chair is a slot you can't resell.</p><span class="cost">1 no-show/week at ₹2,000 ≈ ₹1,00,000/year lost</span></div></div>
+      <div class="pain-card bp-spotlight-card"><div class="ico">📄</div><div><b>Paper case cards</b><p>Records live in physical files. When staff change, history walks out with them.</p><span class="cost">Unsearchable. Unbacked. Medicolegally thin.</span></div></div>
+      <div class="pain-card bp-spotlight-card"><div class="ico">💳</div><div><b>Multi-sitting money leaks</b><p>RCTs, crowns and aligners span weeks. Advance collected, balance forgotten.</p><span class="cost">One unfinished crown case = months of follow-up calls</span></div></div>
+      <div class="pain-card bp-spotlight-card"><div class="ico">🔁</div><div><b>The recall that never happens</b><p>Over 60% of patients never return for 6-month scaling and crown checks.</p><span class="cost">Recall is your cheapest revenue — and nobody sends it</span></div></div>
     </div>
   </div>
 </section>
@@ -186,37 +187,37 @@ footer{border-top:1px solid var(--stroke-soft);padding:56px 0 40px;color:var(--d
       <h2>Built around how dental clinics actually run.</h2>
     </div>
     <div class="bento">
-      <div class="b-card bp-lift">
+      <div class="b-card bp-lift bp-spotlight-card">
         <span class="tag">WhatsApp Engine</span>
         <h3>Every message, sent on time — automatically</h3>
         <p>Booking confirmations, 2-hour pre-appointment reminders with clinic location, post-treatment care instructions, X-rays and estimates — delivered on WhatsApp. 1-click Google review triggers after great visits.</p>
         <div class="mock"><span class="who">RCV confirmed · Chair 2 · 10:30 AM</span><span class="amt">Sent ✓</span></div>
       </div>
-      <div class="b-card bp-lift">
+      <div class="b-card bp-lift bp-spotlight-card">
         <span class="tag">Treatment Planning</span>
         <h3>Visual tooth chart → digital estimate</h3>
         <p>Tap a tooth, record the diagnosis, and build the treatment plan — RCT + crown vs implant — with a clear digital estimate sent straight to the patient's WhatsApp.</p>
         <div class="mock"><span class="who">Tooth 36 · Irreversible pulpitis</span><span class="amt">RCT + Crown ₹14,500</span></div>
       </div>
-      <div class="b-card bp-lift">
+      <div class="b-card bp-lift bp-spotlight-card">
         <span class="tag">Fee Collection</span>
         <h3>Milestone billing that actually collects</h3>
         <p>Multi-sitting plans are billed as milestones — 30% advance, 40% prep, 30% cementation — with automatic UPI payment requests on WhatsApp before each sitting. Bad debts end here.</p>
         <div class="mock"><span class="who">Crown prep · Sitting 2 of 3</span><span class="amt">₹5,800 requested via UPI</span></div>
       </div>
-      <div class="b-card bp-lift">
+      <div class="b-card bp-lift bp-spotlight-card">
         <span class="tag">Recall Engine</span>
         <h3>Dormant patients, reactivated on schedule</h3>
         <p>Automatic 3, 6 and 12-month recalls for scaling, crown checks and aligner reviews. Your dormant patient base becomes recurring revenue without a single manual call.</p>
         <div class="gauge"><div class="ring"><b>6 mo</b></div><div class="lbl"><b>Hygiene recall</b><br>sent to every eligible patient</div></div>
       </div>
-      <div class="b-card bp-lift">
+      <div class="b-card bp-lift bp-spotlight-card">
         <span class="tag">Lab Tracker</span>
         <h3>Never schedule before the crown arrives</h3>
         <p>Track every external lab order — impression sent, shade, expected delivery, trial fit — and get alerts if a patient's sitting approaches before the lab work is back.</p>
         <div class="mock"><span class="who">Zirconia crown · Lab: due Fri</span><span class="badge">On track</span></div>
       </div>
-      <div class="b-card bp-lift">
+      <div class="b-card bp-lift bp-spotlight-card">
         <span class="tag">Multi-Chair</span>
         <h3>Chairs, associates and commissions</h3>
         <p>Chair-wise calendars for Chair 1, Chair 2 and the surgery room, with automatic revenue-share calculation for visiting specialists. End-of-month accounts take minutes, not evenings.</p>
@@ -233,12 +234,12 @@ footer{border-top:1px solid var(--stroke-soft);padding:56px 0 40px;color:var(--d
       <h2>Everything the front desk, the doctor and the owner need.</h2>
     </div>
     <div class="feat">
-      <div class="f"><span class="ico">🌐</span><b>Branded clinic website</b><p>Your own domain and site with online booking, medical history intake and patient education — designed and hosted for you.</p></div>
-      <div class="f"><span class="ico">🔐</span><b>Digital case cards</b><p>Encrypted, searchable patient history with treatment progression across years. Exportable anytime — your data is yours.</p></div>
-      <div class="f"><span class="ico">📊</span><b>Owner command center</b><p>Chair utilisation, collection rate, recall revenue and no-show trends in one dashboard — live, from anywhere.</p></div>
-      <div class="f"><span class="ico">📋</span><b>Consent + e-prescriptions</b><p>Pre-built consent templates for extractions, implants and surgeries, aligned with DCI guidelines. Digitally signed, stored, searchable.</p></div>
-      <div class="f"><span class="ico">🧾</span><b>UPI + GST billing</b><p>India-native payments and invoices. Payment links on WhatsApp, deposits before appointments, GST-ready records.</p></div>
-      <div class="f"><span class="ico">🚪</span><b>Patient portal</b><p>Patients see their treatment plan history, upcoming sittings and payment status — without calling your front desk.</p></div>
+      <div class="f bp-spotlight-card"><span class="ico">🌐</span><b>Branded clinic website</b><p>Your own domain and site with online booking, medical history intake and patient education — designed and hosted for you.</p></div>
+      <div class="f bp-spotlight-card"><span class="ico">🔐</span><b>Digital case cards</b><p>Encrypted, searchable patient history with treatment progression across years. Exportable anytime — your data is yours.</p></div>
+      <div class="f bp-spotlight-card"><span class="ico">📊</span><b>Owner command center</b><p>Chair utilisation, collection rate, recall revenue and no-show trends in one dashboard — live, from anywhere.</p></div>
+      <div class="f bp-spotlight-card"><span class="ico">📋</span><b>Consent + e-prescriptions</b><p>Pre-built consent templates for extractions, implants and surgeries, aligned with DCI guidelines. Digitally signed, stored, searchable.</p></div>
+      <div class="f bp-spotlight-card"><span class="ico">🧾</span><b>UPI + GST billing</b><p>India-native payments and invoices. Payment links on WhatsApp, deposits before appointments, GST-ready records.</p></div>
+      <div class="f bp-spotlight-card"><span class="ico">🚪</span><b>Patient portal</b><p>Patients see their treatment plan history, upcoming sittings and payment status — without calling your front desk.</p></div>
     </div>
   </div>
 </section>
@@ -284,7 +285,7 @@ footer{border-top:1px solid var(--stroke-soft);padding:56px 0 40px;color:var(--d
       <h2>One-time setup. Flat monthly. No per-patient fees.</h2>
     </div>
     <div class="price">
-      <div class="tier">
+      <div class="tier bp-spotlight-card">
         <h3>Solo Starter</h3>
         <div class="who">Single chair / solo practice</div>
         <div class="amt">₹2,499<span>/mo</span></div>
@@ -298,7 +299,7 @@ footer{border-top:1px solid var(--stroke-soft);padding:56px 0 40px;color:var(--d
         </ul>
         <a class="btn btn-ghost" href="https://wa.me/917737077479?text=Hi!%20I%20want%20the%20Dentist%20OS%20Solo%20Starter%20plan.">Start Solo</a>
       </div>
-      <div class="tier hot bp-lift">
+      <div class="tier hot bp-lift bp-spotlight-card">
         <span class="pop">MOST CLINICS PICK THIS</span>
         <h3>Pro Multi-Chair</h3>
         <div class="who">2–4 chair polyclinics</div>
@@ -313,7 +314,7 @@ footer{border-top:1px solid var(--stroke-soft);padding:56px 0 40px;color:var(--d
         </ul>
         <a class="btn btn-primary" href="https://wa.me/917737077479?text=Hi!%20I%20want%20the%20Dentist%20OS%20Pro%20plan%20for%20my%20clinic.">Go Pro</a>
       </div>
-      <div class="tier">
+      <div class="tier bp-spotlight-card">
         <h3>Chain</h3>
         <div class="who">Multi-location dental chains</div>
         <div class="amt">Custom</div>
