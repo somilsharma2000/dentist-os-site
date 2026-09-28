@@ -189,7 +189,18 @@ footer{padding:60px 0 44px;border-top:1px solid var(--stroke-soft);background:#0
 .clientstrip{padding:40px 0;border-top:1px solid rgba(139,172,250,.09);border-bottom:1px solid rgba(139,172,250,.09);background:rgba(255,255,255,.015)}
 .clientstrip p{text-align:center;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:#6E688F;margin-bottom:20px;font-weight:700}
 .clientstrip .bp-marquee-track span{color:#ABA6C7;font-weight:700;font-size:.95rem}
-@media(max-width:760px){.mock-body{grid-template-columns:1fr}.mock-side{flex-direction:row;overflow:auto;border-right:none;border-bottom:1px solid rgba(139,172,250,.09)}.mock-kpis{grid-template-columns:repeat(2,1fr)}.mock-panels{grid-template-columns:1fr}}
+.mock-wrap{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mock-body > * {min-width:0}
+.table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:1.5rem}
+.table-wrap table{min-width:540px;width:100%}
+.roi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:760px){
+  .mock-body{grid-template-columns:1fr}
+  .mock-side{flex-direction:row;overflow-x:auto;border-right:none;border-bottom:1px solid rgba(139,172,250,.09)}
+  .mock-kpis{grid-template-columns:1fr}
+  .mock-panels{grid-template-columns:1fr}
+  .roi-grid{grid-template-columns:1fr}
+}
 
 /* at-rest life (ONE DESIGN law) */
 .mock{animation:mockfloat 8s ease-in-out infinite}
@@ -363,7 +374,7 @@ footer{padding:60px 0 44px;border-top:1px solid var(--stroke-soft);background:#0
       <h2>Marketplace software rents you your own patients.</h2>
       <p>Listing platforms and legacy desktop systems both take more than they give. Dentist OS is yours — branded, private, patient-first.</p>
     </div>
-    <table class="vs">
+    <div class="table-wrap"><table class="vs">
       <tr><th></th><th>Dentist OS</th><th>Marketplace PMS</th><th>Paper + WhatsApp Web</th></tr>
       <tr><td>Patient relationships</td><td class="us">100% yours — private branded portal</td><td class="them">Shared with competitor listings</td><td class="them">Trapped in one phone</td></tr>
       <tr><td>Multi-sitting billing</td><td class="us">Milestone tracking + auto UPI requests</td><td class="them">Single POS transactions</td><td class="them">Mental notes</td></tr>
@@ -371,7 +382,7 @@ footer{padding:60px 0 44px;border-top:1px solid var(--stroke-soft);background:#0
       <tr><td>Lab coordination</td><td class="us">Order tracking + pre-appointment alerts</td><td class="them">Rarely offered</td><td class="them">Paper registers</td></tr>
       <tr><td>Recall engine</td><td class="us">Automated 3/6/12-month campaigns</td><td class="them">Basic or add-on</td><td class="them">Forgotten</td></tr>
       <tr><td>Monthly cost</td><td class="us">Flat — no per-patient fees</td><td class="them">Annual fee + listing pressure</td><td class="them">Free, and it shows</td></tr>
-    </table>
+    </table></div>
   </div>
 </section>
 
@@ -382,7 +393,7 @@ footer{padding:60px 0 44px;border-top:1px solid var(--stroke-soft);background:#0
       <h2>One saved case pays for the month.</h2>
       <p>A single RCT + crown runs ₹8,000–₹45,000 in India. If Dentist OS saves one no-show or brings back two recall patients a month, the subscription is covered in the first three days.</p>
     </div>
-    <div class="pain" style="grid-template-columns:repeat(3,1fr)">
+    <div class="pain roi-grid">
       <div class="pain-card" style="display:block"><b style="font-family:'Space Grotesk';font-size:1.4rem;color:var(--green)">₹25k+</b><p>Recovered monthly from no-show reduction alone, for a 2-chair practice</p></div>
       <div class="pain-card" style="display:block"><b style="font-family:'Space Grotesk';font-size:1.4rem;color:var(--green)">80%</b><p>Reduction in missed appointments with automated WhatsApp reminders</p></div>
       <div class="pain-card" style="display:block"><b style="font-family:'Space Grotesk';font-size:1.4rem;color:var(--green)">24 hrs</b><p>From signup to a fully migrated, running clinic — training included</p></div>
