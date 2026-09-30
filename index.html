@@ -234,10 +234,10 @@ footer{padding:60px 0 44px;border-top:1px solid var(--stroke-soft);background:#0
 <header data-bp-meteors="5" class="hero">
   <div class="container">
     <span class="pill bp-hero-step" style="--bp-hero-delay:0ms"><span class="dot"></span>The operating system for modern dental practices</span>
-    <h1 class="bp-hero-step" style="--bp-hero-delay:100ms">Your clinic, running on <span class="hl">one calm system.</span></h1>
-    <p class="bp-hero-step" style="--bp-hero-delay:220ms">Dentist OS brings your whole practice into one place — WhatsApp-native patient communication, visual tooth-charting, milestone fee collection and automated recalls. No marketplace. No per-patient fees. No chaos at the front desk.</p>
+    <h1 class="bp-hero-step" id="bp-headline" style="--bp-hero-delay:100ms">Your clinic, running on <span class="hl">one calm system.</span></h1>
+    <p class="bp-hero-step" id="bp-sub" style="--bp-hero-delay:220ms">Dentist OS brings your whole practice into one place — WhatsApp-native patient communication, visual tooth-charting, milestone fee collection and automated recalls. No marketplace. No per-patient fees. No chaos at the front desk.</p>
     <div class="ctas bp-hero-step" style="--bp-hero-delay:340ms">
-      <a class="btn btn-primary bp-magnetic-btn" href="https://wa.me/917737077479?text=Hi!%20I%20want%20a%20Dentist%20OS%20demo%20for%20my%20clinic.">Book a Free Demo</a>
+      <a class="btn btn-primary bp-magnetic-btn" id="bp-cta" href="https://wa.me/917737077479?text=Hi!%20I%20want%20a%20Dentist%20OS%20demo%20for%20my%20clinic.">Book a Free Demo</a>
       <a class="btn btn-ghost" href="https://somilsharma2000.github.io/dentist-os/">Open the Live Demo</a>
     </div>
     <div class="trust bp-hero-step" style="--bp-hero-delay:460ms">
@@ -516,9 +516,9 @@ footer{padding:60px 0 44px;border-top:1px solid var(--stroke-soft);background:#0
 
 <script src="https://somilsharma2000.github.io/beyond-pixells/assets/bp-motion.js"></script>
 <script src="https://somilsharma2000.github.io/beyond-pixells/assets/bp-obsidian-veins.js"></script>
-<div class="bp-mobile-cta" role="complementary" aria-label="Book a demo">
+<div class="bp-mobile-cta" id="bp-mcta" role="complementary" aria-label="Book a demo">
   <div class="bp-mobile-cta-in">
-    <div class="bp-mct-copy"><b>Book a free Dentist OS demo</b><span>WhatsApp · no card required</span></div>
+    <div class="bp-mct-copy"><b id="bp-mct-head">Book a free Dentist OS demo</b><span id="bp-mct-sub">WhatsApp · no card required</span></div>
     <a class="bp-mct-btn" href="https://wa.me/917737077479?text=Hi!%20Book%20me%20a%20free%20Dentist%20OS%20demo.">Chat now</a>
   </div>
 </div>
@@ -532,5 +532,42 @@ footer{padding:60px 0 44px;border-top:1px solid var(--stroke-soft);background:#0
 })();
 </script>
 <script src="https://somilsharma2000.github.io/beyond-pixells/assets/bp-effects-kit.js"></script>
+
+<script>
+/* BP content layer: applies content/site.json overrides (edited via the Command Center). HTML keeps matching defaults. */
+(function(){
+  fetch('content/site.json').then(function(r){return r.ok?r.json():null;}).then(function(c){
+    if(!c) return;
+    try{
+      var h=document.getElementById('bp-headline');
+      if(h && c.hero){
+        if(c.hero.headline!=null){
+          var hl=c.hero.hl||'';var wrap=h.querySelector('.hl,em');
+          if(wrap){h.childNodes[0].textContent=c.hero.headline;wrap.textContent=hl;}
+          else{h.textContent=c.hero.headline;}
+        }
+        var sub=document.getElementById('bp-sub'); if(sub&&c.hero.sub) sub.textContent=c.hero.sub;
+      }
+      var ct=document.getElementById('bp-cta');
+      if(ct&&c.cta){
+        var num=c.cta.waNumber||'917737077479';
+        if(c.cta.primaryLabel) ct.textContent=c.cta.primaryLabel;
+        if(c.cta.waPrefill) ct.href='https://wa.me/'+num+'?text='+encodeURIComponent(c.cta.waPrefill);
+      }
+      var mct=document.getElementById('bp-mcta');
+      if(mct&&c.features&&c.features.mobileCta){
+        var f=c.features.mobileCta;
+        if(f.enabled===false){mct.style.display='none';}
+        var mh=document.getElementById('bp-mct-head'),ms=document.getElementById('bp-mct-sub');
+        if(mh&&f.head)mh.textContent=f.head;
+        if(ms&&f.sub)ms.textContent=f.sub;
+        var mb=document.getElementById('bp-mct-btn');
+        if(mb&&c.cta&&c.cta.waPrefill) mb.href='https://wa.me/'+(c.cta.waNumber||'917737077479')+'?text='+encodeURIComponent(c.cta.waPrefill);
+      }
+    }catch(e){ /* never break the page */ }
+  });
+})();
+</script>
+
 </body>
 </html>

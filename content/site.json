@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "name": "Dentist OS site content layer",
+    "version": 1,
+    "updated": "2026-09-30",
+    "note": "Single source of truth for editable Dentist OS content. Command Center edits + deploys this file."
+  },
+  "hero": {
+    "headline": "Your clinic, running on ",
+    "hl": "one calm system.",
+    "sub": "Dentist OS brings your whole practice into one place \u2014 WhatsApp-native patient communication, visual tooth-charting, milestone fee collection and automated recalls. No marketplace. No per-patient fees. No chaos at the front desk."
+  },
+  "cta": {
+    "primaryLabel": "Book a Free Demo",
+    "waPrefill": "Hi! I want a Dentist OS demo for my clinic.",
+    "waNumber": "917737077479"
+  },
+  "features": {
+    "mobileCta": {
+      "enabled": true,
+      "head": "Book a free Dentist OS demo",
+      "sub": "WhatsApp \u00b7 no card required"
+    }
+  }
+}
