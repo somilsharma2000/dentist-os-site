@@ -538,5 +538,19 @@ footer{padding:64px 0 44px;border-top:1px solid var(--stroke-soft);background:va
 })();
 </script>
 
+<script>
+/* Beyond Pixells first-party analytics (no cookies, no third parties) */
+(function(){
+  var end='https://vesper-923580a1.base44.app/functions/trackEvent';
+  var src='dentist-os';
+  var sid='';try{sid=localStorage.getItem('bp_sid');if(!sid){sid=Math.random().toString(36).slice(2,12);localStorage.setItem('bp_sid',sid);}}catch(e){}
+  var send=function(t,md){try{fetch(end,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({event_type:t,path:location.pathname+location.hash,page_url:location.href,referrer:document.referrer||'direct',source:src,session_id:sid,metadata:md||null}),keepalive:true}).catch(function(){});}catch(e){}};
+  send('page_view');
+  document.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest?e.target.closest('a'):null;
+    if(a&&a.href&&a.href.indexOf('wa.me')>-1){send('whatsapp_click',{cta:(a.textContent||'').trim().slice(0,80)});}
+  },true);
+})();
+</script>
 </body>
 </html>
